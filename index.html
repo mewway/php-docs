@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="欢乐逛-PHP编码规范">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon" href="https://hlgcdn.oss-cn-hangzhou.aliyuncs.com/hlg-ui/159486826325896/favicon.ico" />
+    <link rel="stylesheet" href="//unpkg.com/docsify@4/themes/vue.css">
+    <style>
+        .app-name-link img {
+            width: 16%;
+        }
+    </style>
+</head>
+<body>
+  <div id="app"></div>
+  <script src="//unpkg.com/docsify@4/lib/docsify.min.js"></script>
+  <script src="//unpkg.com/prismjs/components/prism-php.min.js"></script>
+  <script src="//unpkg.com/mermaid/dist/mermaid.min.js"></script>
+  <script>
+    window.$docsify = {
+      name: '欢乐逛',
+      repo: 'https://git.gaoding.com/hlg/mustang_dianshang',
+        homepage: 'README.md',
+        loadSidebar: '_sidebar.md',
+        themeColor: '#3F51B5',
+        auto2top: true,
+        subMaxLevel: 4,
+        topMargin: 20,
+        search: {
+            depth: 6,
+            noData: {
+                '/': '没有找到结果!'
+            },
+            paths: 'auto',
+            placeholder: {
+                '/': '输入关键词搜索'
+            },
+            pathNamespaces: ['/zh-cn'],
+        },
+        plantuml: {
+            skin: 'classic',
+        },
+        markdown:{
+            renderer: {
+                code: function(code, lang) {
+                    if (lang === "mermaid") {
+                        return ('<div class="mermaid">' + mermaid.render(lang, code) + '</div>');
+                    }
+                    return this.origin.code.apply(this, arguments);
+                }
+            }
+        },
+        alias: {
+            '/.*/_navbar.md': '/_navbar.md',
+            '/zh-cn/.*/_navbar.md': '/zh-cn/_navbar.md',
+        }
+    }
+  </script>
+  <script src="//unpkg.com/docsify-copy-code@2/dist/docsify-copy-code.min.js"></script>
+  <script src="//unpkg.com/docsify@4/lib/plugins/search.min.js"></script>
+  <script src="//unpkg.com/docsify-plantuml/dist/docsify-plantuml.min.js"></script>
+  <script src="//unpkg.com/docsify@4/lib/plugins/zoom-image.min.js"></script>
+  <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? "https://" : "http://");document.write(unescape("%3Cspan style='display:none;' id='cnzz_stat_icon_1278274447'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "v1.cnzz.com/z_stat.php%3Fid%3D1278274447' type='text/javascript'%3E%3C/script%3E"));</script>
+
+</body>
+</html>
