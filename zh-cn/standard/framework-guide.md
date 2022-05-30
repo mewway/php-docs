@@ -289,14 +289,16 @@ const EMERGENCY = 600;
   2. V2版本： `/api/v2/material/:id` 对应控制器中的方法 *应该* 以版本为后缀命名
 - 接口开发 **应该** 遵循`RESTful`架构的规则, 即路由即资源, 如对投放素材的操作设计时, 路由应该设计为:
 
-    -   GET 资源的获取, 对应路由设计为
+    - GET 资源的获取, 对应路由设计为
         -   `/api/material/:id => 获取单个素材的详情`
         -   `/api/material/:id/item => 获取指定素材的所有商品`
         -   `/api/material/:id/item/:id => 获取指定素材的指定商品`
         -   `/api/material => 获取素材的列表`
-    -   POST 资源的创建 , 对应路由设计为 `/api/material/:id => 创建素材`
-    -   DELETE 资源的移除 , 对应路由设计为 `/api/material/:id => 移除素材`
-    -   PUT 资源的更新 , 对应路由设计为 `/api/material/:id => 更新素材`
+    - POST 资源的创建 , 对应路由设计为 `/api/material/:id => 创建素材`
+    - DELETE 资源的移除 , 对应路由设计为 `/api/material/:id => 移除素材`
+    - PUT 资源的更新 , 对应路由设计为 `/api/material/:id => 更新素材`
+    - 资源路由 **不应该** 超过两级嵌套， 如 `/api/material/:mId/item/:itemId/image/:imgId`，超过两级 **应该** 重新定义资源路由
+        - `/api/material/item/image/:imgId?material_id=xx&item_id=xxx`
 
 - 公用请求参数 **必须** 按照以下传入:
 
