@@ -6,7 +6,7 @@
 
 编辑器: VSCode PHPStorm
 
-数据库可视化管理工具:phpAdmin Navicat
+数据库可视化管理工具:phpMyAdmin Navicat 阿里云DMS
 
 代码格式化工具: Php-cs-fixer
 
@@ -28,4 +28,4 @@ Git脚本: 原生脚本或Oh-my-zsh
 
 接口文档管理: Yapi
 
->   [Yapi接口文档中心](
+>   [Yapi接口文档中心](https://yapi.gaoding.com/group/913)
