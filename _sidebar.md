@@ -1,22 +1,27 @@
-* 前言
-    * [规范的目的](zh-cn/README.md)
-    * [开发遵循的守则](zh-cn/rules.md)
-    * [能愿动词的级别说明](zh-cn/illustrations.md)
+1. 前言
+    * [1.1 规范的目的](zh-cn/README.md)
+    * [1.2 开发遵循的守则](zh-cn/rules.md)
+    * [1.3 能愿动词的级别说明](zh-cn/illustrations.md)
 
-* 项目开发规范
-    * [项目环境](zh-cn/base/environment.md)
-    * [基础架构](zh-cn/base/framework.md)
-    * [开发工具](zh-cn/base/tools.md)
-    * [快速上手](zh-cn/base/quick-start.md)
+2. 项目开发规范
+    * [2.1 项目环境](zh-cn/base/environment.md)
+    * [2.2 基础架构](zh-cn/base/framework.md)
+    * [2.3 开发工具](zh-cn/base/tools.md)
+    * [2.4 快速上手](zh-cn/base/quick-start.md)
 
 
-* 编码规范
-    * [Apollo使用规范](zh-cn/standard/apollo.md)
-    * [项目文档便携规范](zh-cn/standard/document.md)
-    * [Git规范化提交](zh-cn/standard/git.md)
-    * [代码风格](zh-cn/standard/code-style.md)
-    * [框架使用规范](zh-cn/standard/framework-guide.md)
-    * [扩展开发规范](zh-cn/standard/plugin-guide.md)
-    * [单元测试规范](zh-cn/standard/unit-test-guide.md)
-* 其他
-    * [Code Review](zh-cn/code-review.md)
+3. 编码规范
+    * [3.1 代码风格](zh-cn/standard/code-style.md)
+    * [3.2 项目文档编写规范](zh-cn/standard/document.md)
+    * [3.3 Git规范化提交](zh-cn/standard/git.md)
+    * [3.4 框架使用规范](zh-cn/standard/framework-guide.md)
+    * [3.5 扩展开发规范](zh-cn/standard/plugin-guide.md)
+    * [3.6 单元测试规范](zh-cn/standard/unit-test-guide.md)
+    * [3.7 数据库使用规范](zh-cn/standard/mysql.md)
+    * [3.8 缓存使用规范](zh-cn/standard/cache.md)
+    * [3.9 OSS使用规范](zh-cn/standard/oss.md)
+    * [3.10 Apollo使用规范](zh-cn/standard/apollo.md)
+
+
+4. 其他
+    * [4.1 Code Review](zh-cn/code-review.md)
