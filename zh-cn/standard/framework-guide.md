@@ -287,7 +287,8 @@ const EMERGENCY = 600;
 -   Snake 小写下划线的风格, 形如: `i_love_tomato`
 -   MixedCaps 驼峰风格, 其中包括大驼峰, 形如: `ILoveTomato`, 小驼峰, 形如:`iLoveTomato`
 
-请求的入参数及路由的命名 **必须** 严格按照 **小写下划线** 的风格命名, 接口的响应也 **必须** 按照 **小写下划线** 的风格响应
+请求的入参数及路由的命名 **必须** 严格按照 **小写数字下划线** 的风格命名, 接口的响应也 **必须** 按照 **小写数字下划线** 的风格响应
+
 
 > 路由的命名中下划线使用？： 1. 中划线 （seo友好） 2. 下划线（历史用法，沿用）
 
@@ -302,7 +303,7 @@ const EMERGENCY = 600;
         -   `/api/material/:id/item => 获取指定素材的所有商品`
         -   `/api/material/:id/item/:id => 获取指定素材的指定商品`
         -   `/api/material => 获取素材的列表`
-    - POST 资源的创建 , 对应路由设计为 `/api/material/:id => 创建素材`
+    - POST 资源的创建 , 对应路由设计为 `/api/material => 创建素材`
     - DELETE 资源的移除 , 对应路由设计为 `/api/material/:id => 移除素材`
     - PUT 资源的更新 , 对应路由设计为 `/api/material/:id => 更新素材`
     - 资源路由 **不应该** 超过两级嵌套， 如 `/api/material/:mId/item/:itemId/image/:imgId`，超过两级 **应该** 重新定义资源路由
