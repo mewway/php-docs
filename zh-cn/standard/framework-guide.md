@@ -97,6 +97,13 @@
 2. `Service` 层 **必须** 通过 `Repository` 层跟数据库交互
 
 #### Controller 、Service、 Repository 与 Model
+在 `Controller`、 `Service`、 `Repository`、`Model`的四层设计中， 他们的分工 **应该** 如下：
+- 控制器层仅做参数验证，绝不包含业务逻辑
+- 服务层负责调用 `Repository(仓库层)` 封装的逻辑 和 业务逻辑封装
+- 仓库层 负责对 模型层透出的能力，根据业务进行封装后透出给各个服务层调用
+- 模型层 负责表的字段转换、模型获取器的封装、关联的定义、通用CURD方法的封装
+
+> 类的方法调用嵌套 **不应该** 嵌套过多，导致 `trace` 的链路过长， 业务的复杂度和耦合度会随着调用嵌套过多而几何剧增，过多嵌套时 **应该** 考虑重新设计
 
 ##### Controller
 
@@ -233,6 +240,7 @@ const EMERGENCY = 600;
 >   [Laravel 可用的表单验证规则](https://learnku.com/docs/laravel/8.0/validation/1302#available-validation-rules)
 
 ### 中间件开发
+中间件的本质是一个 **洋葱模型**，按照 `hyperf` 框架的设计，可以有 *全局*、*局部* （*类*、 *方法*）两种类型的中间件
 
 ### 数据迁移
 
@@ -253,27 +261,32 @@ const EMERGENCY = 600;
 
 命名 **应该** 根据操作类型来命名:
 
--   新建表 create_table_{table_name}
+- 新建表 create_{table_name}
 
--   修改表
+- 修改表
 
-    -   修改字段 alter_{table_name} _modify_column
+  - 修改字段 alter_{table_name}_modify_column
 
--   增加字段 alter_{table_name} _add_column
+  - 增加字段 alter_{table_name} _add_column
 
-    -   删除字段 alter_{table_name} _drop_column
+  - 删除字段 alter_{table_name} _drop_column
 
--   增加索引 alter_{table_name} _add_index
+  - 增加索引 alter_{table_name} _add_index
 
-    -   删除索引 alter_{table_name} _drop_index
+  - 删除索引 alter_{table_name} _drop_index
 
--   修改索引 alter_{table_name} _modify_index
+  - 修改索引 alter_{table_name} _modify_index
 
-    -   混合操作 alter_{table_name} _mixed
+  - 混合操作 alter_{table_name} _mixed
 
--   删除表 drop_table_{table_name}
+- 删除表 drop_{table_name}
 
 
 #### 存量数据的备份
 
+当过多迁移存在时，此时你的`migrations` 目录
+
+![头大](../../resource/2jkAZ.jpeg)
+
+> 存量数据的备份及解决方案？
 存量数据的备份文档待完善
