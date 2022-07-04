@@ -38,4 +38,21 @@
 3. 枚举值在前，说明在后，每组说明都应该用英文模式下 `中划线` 或 `冒号` 分割， 分割符前后可以带有空格， 结尾可以适用中英文模式下的 `逗号` 或 `分号` 分隔
 
 
+
+合规的注释范例 **可以** 参考如下：
+```mysql
+`enable` tinyint(4) NOT NULL DEFAULT '1' COMMENT '是否可用： 1-可用 0-不可用',
+```
+
+```mysql
+`enable` tinyint(4) NOT NULL DEFAULT '1' COMMENT '是否可用： 1:可用 0:-不可用',
+```
+
+```mysql
+`enable` tinyint(4) NOT NULL DEFAULT '1' COMMENT '是否可用:1-可用;0-不可用;',
+```
+
+```mysql
+`enable` tinyint(4) NOT NULL DEFAULT '1' COMMENT '是否可用 1 - 可用 0 - 不可用',
+```
 ## 其他
