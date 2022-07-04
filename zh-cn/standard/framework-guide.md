@@ -28,11 +28,13 @@
 辅助函数 **必须** 存放在位置: `app/Helpers/Helper.php` 并由`composer` autoload 自动加载引入:
 
 ```json
-"autoload": {
-        "files": [
-            "app/Helpers/Helper.php"
-        ]
-    },
+{
+  "autoload": {
+    "files": [
+      "app/Helpers/Helper.php"
+    ]
+  }
+}
 ```
 
 ### 框架的基础目录划分
