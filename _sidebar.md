@@ -17,7 +17,9 @@
     * [3.4 框架使用规范](zh-cn/standard/framework-guide.md)
     * [3.5 接口开发规范](zh-cn/standard/api-guide.md)
     * [3.6 扩展开发规范](zh-cn/standard/plugin-guide.md)
-    * [3.7 单元测试规范](zh-cn/standard/unit-test-guide.md)
+    * 3.7 单元测试规范
+        * [3.7.1 单元测试规范](zh-cn/standard/unit-test-guide.md)
+        * [3.7.2 最佳实践指南](zh-cn/sample/phpunit.md)
     * [3.8 数据库使用规范](zh-cn/standard/mysql.md)
     * [3.9 缓存使用规范](zh-cn/standard/cache.md)
     * [3.10 OSS使用规范](zh-cn/standard/oss.md)
