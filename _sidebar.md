@@ -14,14 +14,22 @@
     * [3.1 代码风格](zh-cn/standard/code-style.md)
     * [3.2 项目文档编写规范](zh-cn/standard/document.md)
     * [3.3 Git规范化提交](zh-cn/standard/git.md)
-    * [3.4 框架使用规范](zh-cn/standard/framework-guide.md)
-    * [3.5 接口开发规范](zh-cn/standard/api-guide.md)
+    * 3.4 框架使用规范
+        * [3.4.1 hyperf框架规范](zh-cn/standard/framework-guide.md)
+        * [3.4.2 最佳实践指南](zh-cn/sample/framework-guide.md)
+    * 3.5 接口开发规范
+        * [3.5.1 接口开发准则](zh-cn/standard/api-guide.md)
+        * [3.5.2 最佳实践指南](zh-cn/sample/api-guide.md)
     * [3.6 扩展开发规范](zh-cn/standard/plugin-guide.md)
     * 3.7 单元测试规范
         * [3.7.1 单元测试规范](zh-cn/standard/unit-test-guide.md)
         * [3.7.2 最佳实践指南](zh-cn/sample/phpunit.md)
-    * [3.8 数据库使用规范](zh-cn/standard/mysql.md)
-    * [3.9 缓存使用规范](zh-cn/standard/cache.md)
+    * 3.8 数据库使用规范
+        * [3.8.1 数据库使用准则](zh-cn/standard/mysql.md)
+        * [3.8.2 最佳实践指南](zh-cn/sample/mysql.md)
+    * 3.9 缓存使用规范
+        * [3.9.1 缓存使用准则](zh-cn/standard/cache.md)
+        * [3.9.2 最佳实践指南](zh-cn/sample/cache.md)
     * [3.10 OSS使用规范](zh-cn/standard/oss.md)
     * [3.11 Apollo使用规范](zh-cn/standard/apollo.md)
 
