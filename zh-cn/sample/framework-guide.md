@@ -35,10 +35,16 @@
 对应的目录为 `app/Exception`
 异常设计 **应该** 要区分类型，数据验证异常 和 接口异常区分开来， 异常抛出要按业务区分
 例如数据验证错误只在控制器层中抛出，接口异常只在逻辑层抛出
+
+例如：
+- 可以定义一个 `ValidationException` 专门用来在控制器中抛出参数验证失败
+- 定义一个 `ApiException` 结合常量中 定义的 `ApiCode` 来对业务接口异常抛出错误
+- 
 ## 队列
 对应的目录为 `app/Job`
 异步队列设计 **应该** 要支持自分发， 无需每次获取`DriverInterface`， 再做入队
 一个自分发队列参考例子如下：
+
 ```php
 namespace App\Job;
 
@@ -153,6 +159,7 @@ abstract class AbstractJob extends Job
     }
 }
 ```
+
 ## 事件
 对应的目录为 `app/Event` 事件， `app/Listener` 监听
 事件设计 **应该** 要支持自分发，而不是每次都需要实例化 `EventDispatcherInterface` 再去分发事件
@@ -249,3 +256,9 @@ class Store extends Model
 中间件可以用来做参数过滤、跨域处理、登录鉴权等其他权限控制相关、处理输入输出等等
 ## 常量
 对应的目录为 `app/Constants`, **绝不** 在此目录写入任何业务代码， 常量区分不宜过多
+
+常量一般的定义 **应该** 分命名空间， 如：
+- 全局空间 App， 表征应用全局的常量
+- 接口响应码 ApiCode, 表征接口响应的约定码
+- Redis缓存 Redis， 表征Redis缓存的前缀
+- 其他
