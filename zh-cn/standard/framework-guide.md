@@ -93,7 +93,7 @@
 
 ### 框架的基础使用
 
-项目 **必须** 包含 `Controller`, `Service`, `Model` 三层设计， **应该** 包含 `Repository` 层
+项目 **必须** 包含 `Controller`, `Service`, `Model` 三层设计， **可以** 包含 `Repository` 层
 `Repository` 层存在时， **应该** 做出以下改动：
 1. `Model` 层的数据库操作应该简化粒度， 将涉及业务逻辑的下放到 `Repository` 层
 2. `Service` 层 **必须** 通过 `Repository` 层跟数据库交互
